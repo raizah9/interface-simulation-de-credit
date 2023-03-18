@@ -1,0 +1,98 @@
+body{
+    background: url('background.jpg');
+    background-size: cover;
+    background-repeat:no-repeat;
+    font-family: 'Ubuntu', sans-serif;
+    background-attachment: fixed;
+}
+ .logo img{
+   position: absolute;
+   width: 17%;
+   top:50%;
+   left: 10%;
+   transform: translate(0%,-50%);
+}
+.container{
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0,0,0,0.8);
+    text-align: center;
+    border-radius: 20px;
+    padding: 40px;
+    color:#fff;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width:1050px)
+{
+    .logo img{
+        top:50%;
+        left: 0%;
+        transform: translate(0%,-50%);
+    }
+}
+
+@media screen and (max-width:689px)
+{
+    .container{
+        width:60%;
+    }
+}
+@media screen and (max-width:1063px) and (min-width:689px)
+{
+    .container{
+        width:40%;
+    }
+}
+@media screen and (max-width: 473px)
+{
+    .container{
+        width:80%;
+    }
+    .logo img{
+        transform: scale(0);
+    }
+}
+
+@media screen and (max-width: 320px)
+{
+    .container{
+        width:95%;
+    }
+}
+    h2{
+        color:#fff;
+        text-align: center;
+        text-transform: capitalize;
+        font-weight: bold;
+        font-size: 29px;
+    }
+    
+input{
+    width: 100%;
+    margin: 10px 0;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 6px;
+    font-size: 18px;
+    font-weight: bold;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px #747373 solid;
+}
+button{
+    width: 80%;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: rgba(220, 47, 47, 0.931);
+    color: #fff;
+    text-transform: capitalize;
+    outline: none;
+    cursor:pointer; 
+   border: none;
+   margin-top: 1rem;
+}

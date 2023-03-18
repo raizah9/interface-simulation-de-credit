@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: capitalize;
+}
+.logo{
+    height: 3.5rem;
+}
+.header1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0rem ; 
+    padding: 50px 0px;
+    height: 90px;
+    background-color: rgb(241, 245, 245);
+}
+.titre1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    height: 2px;
+    background-color: black;
+    width: 76%;
+    transition: 0.3s ease-in-out;
+  }
+  .titre1:hover::after {
+    width: 100%;
+  }
+.header1-gauche{
+    margin-left: 7vw;
+    display: flex;
+    align-items: center;
+}
+.logotext{
+    margin-left: 6px;
+    font-weight: bold;
+}
+.logout-pic,.intero,.excla,.xmark{
+    width: 40px;
+}
+
+.header1-menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+button{
+    cursor: pointer;
+    padding: 0px;
+    border: none;
+}
+.titre1{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(0, 0, 0);
+    font-size: x-large;
+}
+.menu-icon{
+    height: 40px;
+}
+.hidden-menu {
+    z-index: 10;
+    height: 0;
+    width: 0;
+    transform: scale(0);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.hidden-menu.open{
+  height: auto;
+  width: auto;
+  transform: scale(1);
+  transition: 0.3s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  padding-right: 6px;
+}
+.hidden-menu-button.clicked{
+    margin-right: 10px;
+}
+.hidden-menu-button{
+    background-color: transparent;
+    margin-right: 7vw;
+}
+.hidden-menu >button{
+    margin-left: 0.3vw; 
+    background-color: transparent;
+    padding: 0px;
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    width: 90%;
+}
+@media screen and (max-width:792px)
+{
+    .logotext{
+        transform: scale(0);
+    }
+}
+@media screen and (max-width:888px)
+{
+    .hidden-menu.open{
+        position: absolute;
+        margin-top: 2rem;
+        flex-direction: column;
+        top:13%;
+
+      }
+  .hidden-menu >button{
+    margin-right: 10px;
+    width: 90%;
+}
+.header1-menu{
+    display: block;
+}
+.hidden-menu-button.clicked{
+    margin-right: 7vw;
+}
+}
+
+.div-pret {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    width: 48vw;
+    padding: 10px 0px ;
+    
+  }
+ 
+  .input-wrapper {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:90%;
+   
+  }
+  #input-wrapper1 {
+    margin-top: 2rem;
+  }
+  label {
+    width: 190px;
+    padding-left: 5px;
+  }
+  
+  input {
+    margin-left: 1rem;
+    border: none;
+    background-color: rgba(225, 217, 217, 0.985);
+    padding: 10px;
+    width: 50%;
+    color: rgb(0, 0, 0);
+    font-size: large;
+    border-radius: 3px;
+  }
+  .div-postulant input{
+    background-color: rgba(251, 249, 249, 0.985);
+  }
+  .titre2{
+    font-weight: bold;
+    font-size: xx-large;
+    justify-self: center;
+    border-left: 12px solid rgb(224, 38, 38);
+    padding-left: 4px;
+    margin-left: 1rem;
+    
+  }
+  .divs{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+    gap: 15px;
+  }
+  .div-postulant{
+    background: linear-gradient(to left, rgb(250, 249, 249), rgba(223, 217, 217, 0.985));
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: transparent;
+    padding: 10px 0px ;
+    width: 48vw;   
+    
+  }
+
+@media screen and (max-width:700px)
+{
+.divs{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 90vw;
+  left: 50%;
+  transform: translateX(-50%);
+  
+}
+.divs> div{
+  position: relative;
+  width: 90vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+}
+.residence{
+  padding: 10px 15px;
+  margin-top: 2rem;
+  position: relative;
+  width: 50%;
+}
+.div-postulant div > input {
+  width: 100%;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.options-resid{
+  position: relative;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: min-content;
+}
+
+ .options-resid >label {
+  
+  padding: 8px 16px;
+  background-color: #f5f1f1;
+  font-size: 16px;
+  cursor: pointer;
+  min-width: min-content;
+  height: min-content;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 50px;
+}
+
+input[type="radio"]:checked + label {
+  transition: background-color 0.7s ease;
+  transition: color 0.7s ease;
+  background-color: rgb(223, 63, 63);
+  color: white; 
+}
+.residence-text{
+  font-size: large;
+  position: relative;
+  width: fit-content;
+}

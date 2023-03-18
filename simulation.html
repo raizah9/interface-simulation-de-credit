@@ -1,0 +1,106 @@
+<html lang="en">
+    
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="simulation.css">
+</head>
+<body>
+    <header class="header1">
+        <div class="header1-gauche">
+            <img src="images\logo.png" alt="" class="logo">
+            <div class="logotext"> Caisse nationale<br>d'épargne et de<br>prévoyance-Banque</div>
+        </div>
+    
+        <div class="titre1">Simulation de crédit</div>
+        
+        <div class="header1-menu">
+            <button data-modal-target=".hidden-menu" class="hidden-menu-button"><img src="images\menu-icon1.jpg" alt="" class="menu-icon"></button>
+            <div class="hidden-menu">
+                <button><img src="images\excla.png" alt="" class="excla"></button>
+                <button><img src="images\xmark.png" alt="" class="xmark"></button>
+                <button><img src="images\intero.png" alt="" class="intero"></button>
+                <button class="icon"><img src="images\sign-out-logout-icon-14.png" alt="" class="logout-pic"></button>
+            </div> 
+        </div>
+    </header>
+    <div class="divs">
+        <div class="div-pret">
+            <div class="titre2"> Prêt</div>
+            <div class="input-wrapper"> 
+                <label for="">categorie de prêt </label>
+                <input type="number" min="1" max="31" placeholder="1" >
+            </div>
+            <div class="input-wrapper"> 
+                <label for="">cout d'acquisition </label>
+                <input type="number" min="0,00" placeholder="0,00">
+            </div>
+            <div class="input-wrapper"> 
+                <label for="">type de prêt </label>
+                <input list="type" placeholder="initial"/>
+                <datalist id="type">
+                    <option value="Conventionel" />
+                    <option value="Islamique"/>
+                </datalist>    
+            </div>
+            <div class="input-wrapper"> 
+                <label for="">Valeur du bien donné en garantie</label>
+                <input type="number" min="0,00" placeholder="0,00">
+            </div>
+            <div class="input-wrapper"> 
+                <label for="">mensualité du prêt initial</label>
+                <input type="number" min="0,00" placeholder="0,00">
+            </div>
+        </div>
+    
+        <div class="div-postulant">
+            <div>
+                <div class="titre2"> Postulant</div>
+            <div class="input-wrapper" id="input-wrapper1"> 
+                <label for="">Né(e) le</label>
+                <input type="date" min="01/01/1921" max="31/12/2005">
+            </div>
+            <div class="input-wrapper"> 
+                <label for="">qualité professionelle</label>
+                <input list="qualité professionelle" placeholder="Salarié,retraité,fonction libérale"/>
+                <datalist id="qualité professionelle">
+                    <option value="Salarié,retraité,fonction libérale" />
+                    <option value="Commerçant , artisan"/>
+                    <option value=" Personnel CNEP BANQUE"/>
+                    <option value="Personnel BNP PARIBAS"/>
+                    <option value="Personnel CPA"/>
+                    <option value="Personnel BNA"/>
+                    <option value="Personnel MDN"/>
+                </datalist>
+            </div>
+            <div class="input-wrapper"> 
+                <label for="">secteur d'Activité</label>
+                <input list="secteur d'activité" placeholder="Privé"/>
+                <datalist id="secteur d'activité">
+                    <option value="Privé" />
+                    <option value="Public"/>
+                </datalist>    
+            </div>
+            <div class="residence">
+                <div class="residence-text">residence :</div>
+                <div class="options-resid"> 
+                    <input type="radio" id="étranger" name="résident" value="male">
+                    <label for="étranger">résident à l'étranger</label>
+                    
+                    <input type="radio" id="national" name="résident" value="national">
+                    <label for="national">résident national</label>
+                </div>
+               
+            </div>
+           
+        </div>
+    </div>
+    
+   
+
+    <script src="script-simulation.js"></script>
+</body>
+</html>

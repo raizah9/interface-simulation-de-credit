@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+.logo{
+    position: absolute;
+    width: 15rem;
+    top: 50%;
+    left: 10%;
+    transform :translate(0%,-50%);
+}
+.authen{
+  border-radius: 10px;
+    border-collapse: collapse; 
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    position: absolute;
+    top:50%;
+    left:70%;
+    transform: translate(-70%,-50%);
+    height: 70%;
+    width: 45%;
+    font-weight: bold;
+    font-size: large;
+    background-color: rgb(220, 198, 198);
+    border-radius: 20px;
+    min-height:max-content;
+}
+
+input{
+    position: relative;
+    top: 2rem;
+    left: 50%;
+    transform:  translate(-50%);
+    width: 90%;
+    padding: 10px 10px;
+    margin-top: 6px;
+    border: none;
+    background-color: rgba(161, 125, 125, 0.465);
+    border-radius: 5px;
+    direction: none;
+}
+.titled{
+    margin-top: 5px;
+    position: relative;
+    top: 50%;
+    transform:  translate(0%,-50%);
+    margin-left: 15px;
+    margin-right: 15px;
+  
+}
+input:focus {
+    outline: none;
+    border-bottom: 2px solid rgb(76, 64, 64);
+  }
+  body {
+    position: relative ; 
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  .left{
+    background-color: rgb(79, 3, 3);
+    color: white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+   
+  }
+  .right{
+    border-radius: 10px;
+    background-color: rgb(220, 198, 198);
+  }
+
+  #welcome-text{
+    font-size: x-large;
+    border-bottom: 6px solid rgb(173, 211, 215);
+    padding-bottom: 1rem;
+    
+  }
+  #signin-text{
+    padding-top: 1rem;
+    font-size: medium;
+  }
+
+    .connecter-button{
+    margin-top: 1rem;
+    position: relative;
+    top: 40px;
+    margin-left: 20px;
+    border: none;
+    background-color: rgba(220, 47, 47, 0.931);
+    padding: 10px 10px;
+    border-radius: 30px;
+    width: 50%;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    cursor: pointer;
+  }
+  .créer-button{
+    margin-top: 30px;
+    position: relative;
+    top: 40px;
+    margin-left: 20px;
+    border: none;
+    background-color: rgba(220, 47, 47, 0.931);
+    padding: 10px 10px;
+    border-radius: 30px;
+    width: 80%;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    cursor: pointer;
+  }
+  
+  input::placeholder {
+    color: rgba(0, 0, 0, 0.721);
+    font-size: larger;
+  }
+  .pas-de-compte{
+    position: relative;
+    top: 60px;
+    margin-left: 30px;
+    font-size: small;
+  }
+  input[type="password"] {
+    -webkit-text-security: square; 
+  }
+
+  @media screen and (max-width=332px){
+    .authen{
+      width: 95%;
+      top:50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+      min-height: max-content;
+     }
+  }
