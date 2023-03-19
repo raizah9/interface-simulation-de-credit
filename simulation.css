@@ -293,6 +293,7 @@ input[type="radio"] {
   display: flex;
 }
 .slide-space{
+  padding: revert;
   content: "";
   transform: translate(-50%,0%);
   border: 1px solid white;
