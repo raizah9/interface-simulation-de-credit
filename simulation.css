@@ -136,10 +136,8 @@ button{
     flex-direction: column;
     gap: 0px;
     width: 48vw;
-    padding: 30px 20px ;
+    padding: 20px 20px ;
     border-right: 1px solid rgb(198, 187, 187) ;
-  
-   
   }
  
   .input-wrapper {
@@ -148,13 +146,12 @@ button{
     align-items: center;
     justify-content: space-between;
     width:90%;
-    
   }
   #input-wrapper1 {
     margin-top: 2rem;
   }
   label {
-    width: 190px;
+    width: 190px;;
     padding-left: 5px;
   }
   
@@ -178,7 +175,6 @@ button{
     border-left: 12px solid rgb(224, 38, 38);
     padding-left: 4px;
     margin-left: 1rem;
-    
   }
   .divs{
     position: relative;
@@ -189,6 +185,7 @@ button{
     width: 93%;
     left: 50%;
     transform: translateX(-50%);
+    
   }
   .div-postulant{
    
@@ -197,22 +194,26 @@ button{
     display: flex;
     flex-direction: column;
     gap: 15px;
-    background-color: transparent;
-    padding: 30px 20px ;   
+    padding: 20px 20px ;   
   }
 
 @media screen and (max-width:700px)
 {
-.divs{
+.divs,.divs2{
   display: flex;
   flex-direction: column;
   position: relative;
   width: 90vw;
   left: 50%;
   transform: translateX(-50%);
-  
 }
 .divs> div{
+  position: relative;
+  width: 90vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.divs2> div{
   position: relative;
   width: 90vw;
   left: 50%;
@@ -272,7 +273,7 @@ input[type="radio"] {
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
-  padding: 0px;
+  margin-left: 5px;
   
 }
 .div-switch-caution{
@@ -334,16 +335,18 @@ input[type="checkbox"]:checked +.slide-space
   transform: scale(0);
 }
 .div-caution{
+width: 42vw;
 display: flex;
-gap: 1rem;
-align-items: center;
+justify-content: flex-start;
 flex-direction: column;
-border: solid;
+padding: 0px 20px ;  
 }
-.input-wrapper2{
-  display: flex;
-  align-items: center;
-  border: solid;
+.divs2{
+  margin-top: 3rem;
+  width: 93%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 
