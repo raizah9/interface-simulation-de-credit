@@ -5,6 +5,9 @@
     font-family: 'Ubuntu', sans-serif;
     text-transform: capitalize;
 }
+body{
+  background-color :rgb(255, 255, 255);
+}
 .logo{
     height: 3.5rem;
 }
@@ -106,6 +109,7 @@ button{
         transform: scale(0);
     }
 }
+
 @media screen and (max-width:888px)
 {
     .hidden-menu.open{
@@ -128,13 +132,14 @@ button{
 }
 
 .div-pret {
-    
     display: flex;
     flex-direction: column;
     gap: 0px;
     width: 48vw;
-    padding: 10px 0px ;
-    
+    padding: 30px 20px ;
+    border-right: 1px solid rgb(198, 187, 187) ;
+  
+   
   }
  
   .input-wrapper {
@@ -143,7 +148,7 @@ button{
     align-items: center;
     justify-content: space-between;
     width:90%;
-   
+    
   }
   #input-wrapper1 {
     margin-top: 2rem;
@@ -164,7 +169,7 @@ button{
     border-radius: 3px;
   }
   .div-postulant input{
-    background-color: rgba(251, 249, 249, 0.985);
+    background-color: rgba(221, 202, 202, 0.985);
   }
   .titre2{
     font-weight: bold;
@@ -176,21 +181,24 @@ button{
     
   }
   .divs{
+    position: relative;
     display: flex;
     justify-content: space-evenly;
     margin-top: 3rem;
-    gap: 15px;
+    gap: 2rem;
+    width: 93%;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .div-postulant{
-    background: linear-gradient(to left, rgb(250, 249, 249), rgba(223, 217, 217, 0.985));
+   
+    border-right: 1px solid rgb(198, 187, 187) ;
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 15px;
     background-color: transparent;
-    padding: 10px 0px ;
-    width: 48vw;   
-    
+    padding: 30px 20px ;   
   }
 
 @media screen and (max-width:700px)
@@ -212,8 +220,8 @@ button{
 }
 }
 .residence{
-  padding: 10px 15px;
-  margin-top: 2rem;
+  padding: 0px 5px;
+  margin-top: 1rem;
   position: relative;
   width: 50%;
 }
@@ -232,12 +240,12 @@ input[type="radio"] {
   flex-direction: column;
   gap: 10px;
   width: min-content;
+ 
 }
 
  .options-resid >label {
-  
   padding: 8px 16px;
-  background-color: #f5f1f1;
+  background-color: #ebe4e4;
   font-size: 16px;
   cursor: pointer;
   min-width: min-content;
@@ -245,9 +253,10 @@ input[type="radio"] {
   display: flex;
   justify-content: space-around;
   border-radius: 50px;
+  border: solid;
 }
 
-input[type="radio"]:checked + label {
+.options-resid [type="radio"]:checked + label {
   transition: background-color 0.7s ease;
   transition: color 0.7s ease;
   background-color: rgb(223, 63, 63);
@@ -258,3 +267,85 @@ input[type="radio"]:checked + label {
   position: relative;
   width: fit-content;
 }
+.div-des-switches{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  
+}
+.div-switch-caution{
+  padding-left: 5px;
+  display: flex;
+  align-items: center;
+  margin-left: rem;
+  margin-top: 1rem;
+}
+.caution-text{
+ color: rgb(0, 0, 0);
+ padding-right: 25px;
+}
+.codebiteur-text{
+  
+  color: rgb(0, 0, 0);
+}
+.caution-switch{
+  position: relative;
+  display: flex;
+}
+.slide-space{
+  position: absolute;
+  left: 0%;
+  transform: translate(-50%,0%);
+  border: 1px solid white;
+  position: relative;
+  background-color: rgb(116, 122, 145);
+  width: 60px;
+  height: 20px;
+  border-radius: 30px;
+}
+.caution-switch-label{
+  content: "";
+  border-radius: 50%;
+  width: 21px;
+  height: 21px;
+  background-color: #4d4d58;
+  display: flex;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+input[type="checkbox"]:checked +.slide-space label
+{
+  position: relative;
+  top: 50%;
+  transform: translate(20px,-50%);
+  background-color: rgb(47, 142, 215);
+  transition: 0.3s;
+}
+input[type="checkbox"] +.slide-space label
+{
+  transition: 0.3s;
+}
+input[type="checkbox"]:checked +.slide-space
+{
+  background-color: rgb(179, 182, 212);
+}
+#switch,#switch2{
+  transform: scale(0);
+}
+.div-caution{
+display: flex;
+gap: 1rem;
+align-items: center;
+flex-direction: column;
+border: solid;
+}
+.input-wrapper2{
+  display: flex;
+  align-items: center;
+  border: solid;
+}
+
+
+
