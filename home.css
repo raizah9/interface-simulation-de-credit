@@ -1,0 +1,184 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  font-family: 'Ubuntu', sans-serif;
+}
+.sections{
+  padding: 20px 0;
+}
+.overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+}
+.logo{
+  height: 4.5rem;
+}
+#radio{
+  border: 1px solid black;
+  padding: inherit;
+}
+.header1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0rem ; 
+  padding: 50px 0px;
+  height: 90px;
+  background-color: rgb(241, 245, 245);
+}
+.titre1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  height: 2px;
+  background-color: black;
+  width: 78%;
+  transition: width 0.3s ease-in-out;
+}
+.titre1:hover::after {
+  width: 100%;
+}
+.header1-gauche{
+  margin-left: 3vw;
+  display: flex;
+  align-items: center;
+}
+.logotext{
+  margin-left: 6px;
+  font-size: larger;
+  font-weight: bold;
+  text-align-last: center;
+}
+.logout-pic,.intero,.excla,.xmark{
+  width: 40px;
+}
+
+.header1-menu{
+  display: flex;
+  justify-content: space-between;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+button{
+  cursor: pointer;
+  padding: 0px;
+  border: none;
+  
+}
+.titre1{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  color: rgb(0, 0, 0);
+  font-size: x-large;
+}
+.menu-icon{
+  height: 40px;
+}
+.hidden-menu {
+  z-index: 10;
+  height: 0;
+  width: 0;
+  transform: scale(0);
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+.hidden-menu.open{
+height: auto;
+width: auto;
+transform: scale(1);
+transition: 0.4s ease-in-out;
+padding-right: 6px;
+}
+.hidden-menu-button.clicked{
+  margin-right: 10px;
+}
+.hidden-menu-button{
+  background-color: transparent;
+  margin-right: 7vw;
+}
+.hidden-menu >button{
+  margin-left: 0.3vw; 
+  background-color: transparent;
+  padding: 0px;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  font-size: large;
+  width: 90%;
+}
+@media screen and (max-width:1352px)
+{
+  .logo{
+      left: 50%;
+      top: 0%;
+      transform: translate(-50%,0%);
+  }
+  .logotext{
+      transform: scale(0);
+  }
+}
+@media screen and (max-width:888px)
+{
+  .hidden-menu.open{
+      position: absolute;
+      margin-top: 2rem;
+      flex-direction: column;
+      top:13%;
+
+    }
+.hidden-menu >button{
+  margin-right: 10px;
+  width: 90%;
+}
+.header1-menu{
+  display: block;
+}
+.hidden-menu-button.clicked{
+  margin-right: 7vw;
+}
+}
+.home{
+  height: 500px;
+  background-image: url("banque.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.home .home-content{
+position: absolute;
+top:50%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+.home .home-title{
+  color: #fff;
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+.home .home-desc{
+  color:#fff;
+  font-size: 19px;
+}
+.home .button{
+  background: #7cb62f;
+  color: #fff;
+  width: 150px;
+  text-align: center;
+  padding: 10px 0;;
+}
+.about{
+  font-size: 20px;
+}
