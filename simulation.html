@@ -107,8 +107,8 @@
                     <div class="caution-text"> caution </div>
                    
                     <div class="caution-switch">
-                     <input type="checkbox" id="switch">
-                     <label for="switch" class="slide-space">
+                         <button id="switch" data-modal-target=".divs2"></button>
+                         <label for="switch" class="slide-space">
                          <label for="switch" class="caution-switch-label"></label>
                      </label> 
                     </div>
@@ -119,7 +119,7 @@
                         <div class="codebiteur-text"> codebiteur </div>
                        
                         <div class="caution-switch">
-                         <input type="checkbox" id="switch2">
+                            <button id="switch2" data-modal-target=".divs3"></button>
                          <label for="switch2" class="slide-space">
                              <label for="switch2" class="caution-switch-label"></label>
                          </label> 
@@ -145,7 +145,60 @@
     
             </datalist>
         </div>
+        <div class="input-wrapper"> 
+            <label for="">revenue mensuel net</label>
+            <input list="secteur d'activité" placeholder="0.00da"/> 
+        </div>
     </div>
+</div>
+<div class="divs3">
+    <div class="div-caution">
+        <div>
+            <div class="titre2">codebiteur</div>
+        <div class="input-wrapper" id="input-wrapper1"> 
+            <label for="">Né(e) le</label>
+            <input type="date" min="01/01/1921" max="31/12/2005">
+        </div>
+        <div class="input-wrapper"> 
+            <label for="">qualité professionelle</label>
+            <input list="qualité professionelle" placeholder="Salarié,retraité,fonction libérale"/>
+            <datalist id="qualité professionelle">
+                <option value="Salarié,retraité,fonction libérale" />
+                <option value="Commerçant , artisan"/>
+                <option value=" Personnel CNEP BANQUE"/>
+                <option value="Personnel BNP PARIBAS"/>
+                <option value="Personnel CPA"/>
+                <option value="Personnel BNA"/>
+                <option value="Personnel MDN"/>
+            </datalist>
+        </div>
+        <div class="input-wrapper"> 
+            <label for="">secteur d'Activité</label>
+            <input list="secteur d'activité" placeholder="Privé"/>
+            <datalist id="secteur d'activité">
+                <option value="Privé" />
+                <option value="Public"/>
+            </datalist>    
+        </div>
+        <div class="input-wrapper"> 
+            <label for="">revenue mensuel net</label>
+            <input list="secteur d'activité" placeholder="0.00da"/> 
+        </div>
+        <div class="residence">
+            <div class="residence-text">residence :</div>
+            <div class="options-resid"> 
+                <input type="radio" id="étranger2" name="résident" value="male">
+                <label for="étranger2">résident à l'étranger</label>
+                
+                <input type="radio" id="national2" name="résident" value="national">
+                <label for="national2">résident national</label>
+            </div>
+           
+        </div>
+       
+    </div>
+   
+</div>
 </div>
 
     <script src="script-simulation.js"></script>

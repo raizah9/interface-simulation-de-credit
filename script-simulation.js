@@ -1,9 +1,18 @@
-const OpenMenu= document.querySelector('[data-modal-target]');
-OpenMenu.addEventListener('click',() => {
-    const modal = document.querySelector(OpenMenu.dataset.modalTarget)
-    modal.classList.toggle('open')
-    OpenMenu.classList.toggle('clicked')
-  
+const OpenMenu = document.querySelectorAll('[data-modal-target]');
+
+OpenMenu.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = document.querySelector(button.dataset.modalTarget);
+    modal.classList.toggle('open');
+    button.classList.toggle('clicked');
+
+
+   if(modal.classList.contains('divs2') || modal.classList.contains('divs3')){
+    window.scrollTo(0,document.body.scrollHeight);
+   }
+   
+
+  });
 });
 
 

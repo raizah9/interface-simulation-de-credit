@@ -144,7 +144,6 @@ button{
     margin-top: 1rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     width:90%;
   }
   #input-wrapper1 {
@@ -199,7 +198,7 @@ button{
 
 @media screen and (max-width:700px)
 {
-.divs,.divs2{
+.divs,.divs2,.divs3{
   display: flex;
   flex-direction: column;
   position: relative;
@@ -214,6 +213,12 @@ button{
   transform: translateX(-50%);
 }
 .divs2> div{
+  position: relative;
+  width: 90vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.divs3> div{
   position: relative;
   width: 90vw;
   left: 50%;
@@ -277,16 +282,17 @@ input[type="radio"] {
   
 }
 .div-switch-caution{
+  
   display: flex;
   align-items: center;
   margin-top: 1rem;
 }
 .caution-text{
  color: rgb(0, 0, 0);
- padding-right: 25px;
+ padding-right: 57px;
 }
 .codebiteur-text{
-  
+  padding-right: 35px;
   color: rgb(0, 0, 0);
 }
 .caution-switch{
@@ -300,7 +306,7 @@ input[type="radio"] {
   border: 1px solid white;
   position: relative;
   background-color: rgb(116, 122, 145);
-  width: 60px;
+  width: 45px;
   height: 20px;
   border-radius: 30px;
 }
@@ -315,19 +321,38 @@ input[type="radio"] {
   top: 50%;
   transform: translateY(-50%);
 }
-input[type="checkbox"]:checked +.slide-space label
+
+#switch.clicked +.slide-space label
 {
   position: relative;
   top: 50%;
   transform: translate(20px,-50%);
   background-color: rgb(47, 142, 215);
   transition: 0.3s;
+  margin-left:  3px;
 }
-input[type="checkbox"] +.slide-space label
+#switch +.slide-space label
 {
   transition: 0.3s;
 }
-input[type="checkbox"]:checked +.slide-space
+#switch.clicked +.slide-space
+{
+  background-color: rgb(179, 182, 212);
+}
+#switch2.clicked +.slide-space label
+{
+  position: relative;
+  top: 50%;
+  transform: translate(20px,-50%);
+  background-color: rgb(47, 142, 215);
+  transition: 0.3s;
+  margin-left:  3px;
+}
+#switch2 +.slide-space label
+{
+  transition: 0.3s;
+}
+#switch2.clicked+.slide-space
 {
   background-color: rgb(179, 182, 212);
 }
@@ -335,19 +360,43 @@ input[type="checkbox"]:checked +.slide-space
   transform: scale(0);
 }
 .div-caution{
-width: 42vw;
+width: 65vw;
 display: flex;
 justify-content: flex-start;
 flex-direction: column;
 padding: 0px 20px ;  
+padding-bottom: 60px;
 }
 .divs2{
+  height: 0px;
   margin-top: 3rem;
   width: 93%;
   position: relative;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) scale(0);
+  transition: 0.4s ease; 
 }
 
+.divs2.open{
+  height: auto;
+  transform: translateX(-50%) scale(1);
+  transition: 0.4s ease; 
 
+}
+.divs3{
+
+  height: 0;
+  width: 93%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  transition: 0.4s ease; 
+}
+
+.divs3.open{
+  height: auto;
+  transform: translateX(-50%) scale(1);
+  transition: 0.4s ease; 
+
+}
 
